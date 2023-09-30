@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body style="background-image: url('backgroundnumera.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-attachment: fixed;">
+    <title>Finalizador de Projetos</title>
+
+<link rel="stylesheet" type="text/css" href="stylesnumeracao.css">
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+        #controls {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="file" id="imageLoader" class="image-loader-button">
+    <canvas id="imageCanvas"></canvas>
+<div id="colorLegend" style="display: none;"></div>
+
+    <div id="controls">
+        <button id="enlarge">Ampliar</button>
+         <button id="downloadProject">Baixar Projeto</button>
+
+        <button id="number">Numerar</button>
+    
+  
+  <button id="grid5">Grade 5cm</button>
+  <input type="color" id="colorPickerForGrid5" value="#00ff00">  <!-- Seletor de cor para grade de 5 -->
+
+    <button id="grid10">Grade 10cm</button>
+  
+
+<button id="grid7">Grade 7cm</button>
+<button id="grid8">Grade 8cm</button>
+<button id="grid12">Grade 12cm</button>
+<button id="grid15">Grade 15/16cm</button>
+<button id="grid20">Grade 20cm</button>
+
+        <button id="divide4">4 Partes</button>
+        <button id="divide8">8 Partes</button>
+        <button id="divide16">16 Partes</button>
+<button id="clearButton">Recomeçar</button>
+
+
+
+ </div>
+<button id="backButton" style="position: fixed; top: 862px; right: 5px;">Voltar</button>
+
+
+
+
+    <script src="app.js"></script>
+
+<script>
+    // Verifica se o usuário está logado
+    if (!localStorage.getItem('userLoggedIn')) {
+        window.location.href = 'index.html'; // Redireciona para a página de login se não estiver logado
+    }
+window.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'acessoapp.html';
+        });
+    });
+</script>
+
+</body>
+</html>
